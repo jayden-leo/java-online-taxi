@@ -6,3 +6,8 @@ spring:
       server-addr: localhost:8848
   application:
     name: api-passenger
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 0

@@ -15,9 +15,6 @@ public class VerifyCodeController {
 
     @GetMapping("/number-code/{size}")
     public ResponseResult verifyCodeGet(@PathVariable("size") Integer size) {
-
-
         return verifyCodeService.generateCode(size);
-
     }
 }
