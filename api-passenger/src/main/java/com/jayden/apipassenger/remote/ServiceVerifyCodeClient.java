@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient("service-verifycode")
-public interface VerifyCodeClient {
+public interface ServiceVerifyCodeClient {
 
     @GetMapping("/number-code/{size}")
     public ResponseResult<NumberCodeResponse> verifyCodeGet(@PathVariable("size") Integer verifyCodeSize);
