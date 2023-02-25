@@ -20,6 +20,15 @@ public class VerifyCodeController {
         String passengerPhone = verifycodeDTO.getPassengerPhone();
 
         return verifyCodeService.verifyCodeGet(passengerPhone);
+    }
 
+    @GetMapping("/verifycode-check")
+    public ResponseResult verifyCodeCheck(@RequestBody VerifyCodeDTO verifycodeDTO){
+
+        String passengerPhone = verifycodeDTO.getPassengerPhone();
+        String verifyCode = verifycodeDTO.getVerifyCode();
+
+
+        return verifyCodeService.verifyCodeCheck(passengerPhone,verifyCode);
     }
 }

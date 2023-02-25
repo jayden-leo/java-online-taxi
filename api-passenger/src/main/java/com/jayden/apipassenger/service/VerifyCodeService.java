@@ -5,6 +5,7 @@ import com.jayden.internalcommon.constant.IdentityConstants;
 import com.jayden.internalcommon.dto.ResponseResult;
 import com.jayden.internalcommon.request.VerifyCodeDTO;
 import com.jayden.internalcommon.response.NumberCodeResponse;
+import com.jayden.internalcommon.response.TokenResponse;
 import com.jayden.internalcommon.util.RedisPrefixUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -40,4 +41,20 @@ public class VerifyCodeService {
     }
 
 
+    public ResponseResult verifyCodeCheck(String passengerPhone, String verifyCode) {
+
+        // 参数校验
+        System.out.println("参数校验");
+
+        // 判断redis和验证码的值
+        System.out.println("判断redis和验证码");
+
+        // 从数据库中查看是否有用户,是的话就插入,如果有就返回token
+
+        // 生成token
+
+        TokenResponse tokenResponse = new TokenResponse();
+        tokenResponse.setAccessToken("lskjdgapsig");
+        return ResponseResult.success(tokenResponse);
+    }
 }

@@ -8,6 +8,7 @@
         <module>api-passenger</module>
         <module>service-verifycode</module>
         <module>internal-common</module>
+        <module>service-passenger-user</module>
     </modules>
 
     <parent>
@@ -19,6 +20,14 @@
     <groupId>com.jayden</groupId>
     <artifactId>java-online-taxi-public</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.jayden</groupId>
+            <artifactId>internal-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 
