@@ -34,7 +34,8 @@ public class VerifyCodeService {
         verifyCodeDTO.setPassengerPhone(passengerPhone);
         Integer verifyCodeSize = 6;
         ResponseResult<NumberCodeResponse> responseResult = verifyCodeClient.verifyCodeGet(verifyCodeSize);
-        int numberCode = responseResult.getData().getNumberCode();
+        Integer numberCode = responseResult.getData().getNumberCode();
+        verifyCodeDTO.setVerifyCode(numberCode.toString());
         System.out.println("从service-verifycode服务得到的验证码是："+numberCode);
 
         // 将验证码存入redis
@@ -42,7 +43,8 @@ public class VerifyCodeService {
         String passengerKey = RedisPrefixUtils.generatorKeyByPhone(passengerPhone, IdentityConstants.PASSENGER_IDENTITY);
         stringRedisTemplate.opsForValue().set(passengerKey,numberCode+"",2, TimeUnit.MINUTES);
 
-        return ResponseResult.success();
+
+        return ResponseResult.success(verifyCodeDTO);
     }
 
     @Autowired

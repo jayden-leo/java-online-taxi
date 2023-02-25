@@ -23,9 +23,6 @@ public class TokenService {
     public ResponseResult refreshToken(String refreshTokenSrc) {
         // 解析 refreshToken
         TokenResult tokenResult = JwtUtils.checkToken(refreshTokenSrc);
-        if (tokenResult == null) {
-            return ResponseResult.fail(CommonStatusEnum.TOKEN_ERROR.getCode(), CommonStatusEnum.TOKEN_ERROR.getMessage());
-        }
         String phone = tokenResult.getPhone();
         String identity = tokenResult.getIdentity();
 
