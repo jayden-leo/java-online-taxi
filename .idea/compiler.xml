@@ -8,10 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-passenger" />
+        <module name="service-driver-user" />
         <module name="service-price" />
         <module name="service-passenger-user" />
-        <module name="service-verifycode" />
         <module name="internal-common" />
+        <module name="service-verifycode" />
         <module name="service-map" />
       </profile>
     </annotationProcessing>
@@ -21,6 +22,7 @@
       <module name="api-passenger" options="-parameters" />
       <module name="internal-common" options="-parameters" />
       <module name="java-online-taxi-parent" options="-parameters" />
+      <module name="service-driver-user" options="-parameters" />
       <module name="service-map" options="-parameters" />
       <module name="service-passenger-user" options="-parameters" />
       <module name="service-price" options="-parameters" />
