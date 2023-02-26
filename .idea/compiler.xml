@@ -12,6 +12,7 @@
         <module name="service-price" />
         <module name="service-passenger-user" />
         <module name="internal-common" />
+        <module name="api-driver" />
         <module name="api-boss" />
         <module name="service-verifycode" />
         <module name="service-map" />
@@ -21,6 +22,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-boss" options="-parameters" />
+      <module name="api-driver" options="-parameters" />
       <module name="api-passenger" options="-parameters" />
       <module name="internal-common" options="-parameters" />
       <module name="java-online-taxi-parent" options="-parameters" />
