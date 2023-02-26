@@ -167,7 +167,7 @@ public class Car implements Serializable {
     /**
      * 状态：0:有效，1：失效
      */
-    private Boolean state;
+    private Integer state;
 
     /**
      * 终端Id

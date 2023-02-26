@@ -1,7 +1,9 @@
 package com.jayden.servicedriveruser.mapper;
 
-import com.jayden.servicedriveruser.entity.Car;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jayden.internalcommon.dto.Car;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +13,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author jayden
  * @since 2023-02-26
  */
+@Repository
 public interface CarMapper extends BaseMapper<Car> {
 
 }
