@@ -22,7 +22,8 @@ public class MysqlGenerator {
                             "D:\\Projects\\JavaProjects\\java-online-taxi\\java-online-taxi-public\\service-driver-user\\src\\main\\java\\com\\jayden\\servicedriveruser\\mapper"));
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("car");
+//                    builder.addInclude("car");
+                    builder.addInclude("driver_car_binding_relationship");
                 })
                 .templateEngine(new FreemarkerTemplateEngine())
                 .execute();
