@@ -16,7 +16,6 @@ public class VerifyCodeController {
     @GetMapping("/verifycode-get")
     public ResponseResult verifyCode(@RequestBody VerifyCodeDTO verifyCodeDTO){
 
-
         String driverPhone = verifyCodeDTO.getDriverPhone();
         return verifyCodeService.checkAndSendVerifyCode(driverPhone);
     }
