@@ -15,5 +15,5 @@ spring:
 # 自定义的 key：value
 amap:
   key: 76a1af7566371b2f89c4f8f11e4a957b
-  #服务id，服务名称：测试2
-  sid: 809558
+  #服务id，服务名称：moss
+  sid: 891857
