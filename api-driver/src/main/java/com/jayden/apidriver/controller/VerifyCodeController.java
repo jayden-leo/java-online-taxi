@@ -19,4 +19,14 @@ public class VerifyCodeController {
         String driverPhone = verifyCodeDTO.getDriverPhone();
         return verifyCodeService.checkAndSendVerifyCode(driverPhone);
     }
+
+    @GetMapping("/verifycode-check")
+    public ResponseResult verifyCodeCheck(@RequestBody VerifyCodeDTO verifycodeDTO){
+
+        String driverPhone = verifycodeDTO.getDriverPhone();
+        String verifyCode = verifycodeDTO.getVerifyCode();
+
+
+        return verifyCodeService.verifyCodeCheck(driverPhone,verifyCode);
+    }
 }
