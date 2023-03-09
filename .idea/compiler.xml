@@ -11,8 +11,8 @@
         <module name="service-driver-user" />
         <module name="service-price" />
         <module name="service-passenger-user" />
-        <module name="internal-common" />
         <module name="service-verifycode" />
+        <module name="internal-common" />
         <module name="api-boss" />
         <module name="api-driver" />
         <module name="service-map" />
