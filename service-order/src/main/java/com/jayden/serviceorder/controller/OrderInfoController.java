@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/order")
-public class OrderController {
+public class OrderInfoController {
 
     @Autowired
     private OrderInfoService orderInfoService;
@@ -17,11 +17,7 @@ public class OrderController {
     public ResponseResult add(@RequestBody OrderRequest orderRequest){
         System.out.println(orderRequest);
 
-        return ResponseResult.success();
+        return orderInfoService.add(orderRequest);
     }
 
-    @GetMapping("/testMapper")
-    public String testMapper(){
-        return orderInfoService.testMapper();
-    }
 }
