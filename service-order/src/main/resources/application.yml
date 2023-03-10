@@ -1,0 +1,9 @@
+server:
+  port: 8089
+spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+  application:
+    name: service-order
+
